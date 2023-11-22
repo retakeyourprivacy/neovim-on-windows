@@ -4,14 +4,14 @@
 -- nvim_create_autocmd({event}, {*opts})
 
 -- install plug-vim
---vim.cmd ([[
---if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
---echo "Downloading junegunn/vim-plug to manage plugins..."
---silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
---silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
---autocmd VimEnter * PlugInstall
---endif
---]])
+vim.cmd ([[
+if ! filereadable('~/AppData/Local/nvim/autoload/plug.vim')
+    echo "Downloading junegunn/vim-plug to manage plugins..."
+    silent !mkdir -p ~/AppData/Local/nvim/autoload
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/AppData/Local/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
+endif
+]])
 
 -- plugins
 vim.cmd ([[
