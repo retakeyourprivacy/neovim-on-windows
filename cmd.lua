@@ -15,7 +15,7 @@ endif
 
 -- plugins
 vim.cmd ([[
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin('~\AppData\Local\nvim\plugged')
 Plug 'ap/vim-css-color'
 Plug 'lunarvim/synthwave84.nvim'
 Plug 'mbbill/undotree'
