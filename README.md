@@ -2,15 +2,21 @@
 
 All the alterations needed to get Neovim working on Windows.
 
-Right now, this is just the cmd.lua with the correct path.
+## Installation
 
-## Instructions
+Install `chocolatey` with the following command in an administrative Powershell:
 
-Create an nvim directory within the `~/AppData/Local` directory. Then, copy the dotfiles for Neovim into the nvim directory.
+```
+winget install chocolatey
+```
 
-Swap out the cmd.lua in the dotfiles with the one located in this repo, as it has the correct path syntax for Windows.
+Install `git` and `neovim`.
 
-Remove the following files from the `after\plugin` directory:
+Create an `nvim` directory within the `~/AppData/Local` directory. Then, clone the base Neovim configs into the `nvim` directory.
+
+Swap out the `cmd.lua` and `.gitignore` in the configs with the one located in this repo.
+
+Comment out the following files from the `after\plugin` directory:
 - lsp.lua
 - treesitter.lua
 
